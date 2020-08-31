@@ -1,0 +1,20 @@
+{
+  "include": [
+    "src/index.ts"
+  ],
+  "exclude": [
+    "src/index.spec.ts"
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}
