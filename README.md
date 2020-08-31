@@ -15,7 +15,7 @@ Use Server Side Rendering (SSR) everywhere.
 - Ease of Integration. You can integrate it with Golang, Rust, Java, PHP and etc via HTTP Server or Child Process. (_On Progress_)
 - Can be used with Vanilla JS, jQuery, Svelte, Routify, Handlebars and etc.
 - Can be used in Lambda Functions (or Serverless) like AWS Lambda, Netlify, Vercel and etc. (_NodeJS v10 or newer required._)
-- Passing custom Props like `cookie`, `session` and etc to Javascript Code. (_We avoid to use meta tag for temporary state or data to increase performance. Assigning data to `window` object is faster than create new meta element._)
+- Passing custom Props like `cookie`, `session` and etc to Javascript Code. (_We avoid to use `meta` element for temporary state or data to increase performance. Assigning data to `window` object is faster than create new `meta` element and append it into DOM._)
 
 ## Installation
 
