@@ -1,6 +1,6 @@
 const express = require('express')
 const { readFileSync } = require('fs')
-const { renderToString } = require('../../dist/index')
+const { renderToString } = require('uniserv')
 
 const template = readFileSync('./public/template.html', 'utf8')
 const script = readFileSync('./public/script.js', 'utf8')
