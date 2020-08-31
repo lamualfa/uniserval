@@ -1,6 +1,6 @@
-[![NPM Version](https://badgen.net/npm/v/uniserv?color=red&icon=npm&label=version&cache=300)](https://npmjs.com/package/uniserv)
-[![Github License](https://badgen.net/github/license/lamualfa/uniserv?color=purple&label=license&cache=300)](https://github.com/lamualfa/uniserv/blob/master/LICENSE)
-![CI Testing](https://github.com/lamualfa/uniserv/workflows/CI%20Testing/badge.svg)
+[![Version](https://badgen.net/npm/v/uniserv?color=blue&label=version)](https://npmjs.com/package/uniserv)
+[![Github License](https://badgen.net/github/license/lamualfa/uniserv?color=purple&label=license)](https://github.com/lamualfa/uniserv/blob/master/LICENSE)
+[![CI Testing](https://github.com/lamualfa/uniserv/workflows/CI%20Testing/badge.svg)](https://github.com/lamualfa/uniserv/actions?query=workflow%3A%22CI+Testing%22)
 [![Maintainability](https://api.codeclimate.com/v1/badges/da819077ced8476f6b42/maintainability)](https://codeclimate.com/github/lamualfa/uniserv/maintainability)
 
 # Universal Server Side Rendering (SSR)
