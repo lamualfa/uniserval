@@ -15,7 +15,7 @@
     "url": "https://github.com/lamualfa/uniserv/issues"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "yarn format && yarn lint && tsc",
     "prepublish": "yarn format && yarn build",
     "test": "jest",
     "lint": "eslint src --ext .ts",
