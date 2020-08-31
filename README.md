@@ -14,7 +14,7 @@ Use Server Side Rendering (SSR) everywhere.
 - Typescript support.
 - Ease of Integration. You can integrate it with Golang, Rust, Java, PHP and etc via HTTP Server or Child Process. (_On Progress_)
 - Can be used with Vanilla JS, jQuery, Svelte, Routify, Handlebars and etc.
-- Can be use in Lambda Server. (_NodeJS v10 or newer required._)
+- Can be used in Lambda Functions (or Serverless) like AWS Lambda, Netlify, Vercel and etc. (_NodeJS v10 or newer required._)
 - Passing custom Props like `cookie`, `session` and etc to Javascript Code.
 
 ## Installation
