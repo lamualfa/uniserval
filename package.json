@@ -1,6 +1,6 @@
 {
   "name": "uniserval",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use Server Side Rendering Anywhere.",
   "main": "dist/index.js",
   "author": "laodemalfatih@lamualfa.com",
