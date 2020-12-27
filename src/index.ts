@@ -52,20 +52,19 @@ export function renderToString(
     safeDom(dom)
 
     function render() {
-      let isError
-      let payload
+      let err
+      let html
 
       try {
         if (options.afterEval) options.afterEval(dom)
-        payload = dom.serialize()
+        html = dom.serialize()
       } catch (error) {
-        isError = true
-        payload = error
+        err = error
+      } finally {
+        dom.window.close()
+        if (html) resolve(html)
+        else reject(err)
       }
-
-      dom.window.close()
-      if (isError) reject(payload)
-      else resolve(payload)
     }
 
     try {
