@@ -14,6 +14,7 @@ export type Options = {
   cookie?: string
   beforeEval?: (dom: JSDOM) => void
   afterEval?: (dom: JSDOM) => void
+  isStaticPage?: boolean
 }
 
 // eslint-disable-next-line
@@ -32,6 +33,8 @@ function safeDom(dom: DOM) {
   dom.window.TextDecoder = TextDecoder
 }
 
+const cacheStaticPages = {}
+
 export function renderToString(
   html: string,
   script: string,
@@ -39,9 +42,13 @@ export function renderToString(
   options: Options = {}
 ): Promise<string> {
   return new Promise((resolve, reject) => {
+    const path = options.path || '/'
+    if (options.isStaticPage && cacheStaticPages[path])
+      return resolve(cacheStaticPages[path])
+
     const jsdomOptions: JSDOMOptions = {
       runScripts: 'outside-only',
-      url: urlJoin(options.host || 'http://jsdom.ssr', options.path || '/'),
+      url: urlJoin(options.host || 'http://jsdom.ssr', path),
     }
     if (options.userAgent) jsdomOptions.userAgent = options.userAgent
 
@@ -58,6 +65,7 @@ export function renderToString(
       try {
         if (options.afterEval) options.afterEval(dom)
         html = dom.serialize()
+        if (options.isStaticPage) cacheStaticPages[path] = html
       } catch (error) {
         err = error
       } finally {
