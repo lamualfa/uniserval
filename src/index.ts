@@ -68,14 +68,18 @@ export function renderToString(
       else resolve(payload)
     }
 
-    if (options.beforeEval) options.beforeEval(dom)
+    try {
+      if (options.beforeEval) options.beforeEval(dom)
 
-    if (options.eventName)
-      // Register event
-      dom.window.addEventListener(options.eventName, render)
+      if (options.eventName)
+        // Register event
+        dom.window.addEventListener(options.eventName, render)
 
-    dom.window.eval(script)
+      dom.window.eval(script)
 
-    if (!options.eventName) render()
+      if (!options.eventName) render()
+    } catch (error) {
+      reject(error)
+    }
   })
 }
