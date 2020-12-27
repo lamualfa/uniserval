@@ -1,18 +1,18 @@
 {
-  "name": "uniserv",
-  "version": "0.0.1",
+  "name": "uniserval",
+  "version": "1.0.0",
   "description": "Use Server Side Rendering Anywhere.",
   "main": "dist/index.js",
-  "author": "lamualfa@gmail.com",
+  "author": "laodemalfatih@lamualfa.com",
   "license": "WTFPL",
-  "homepage": "https://github.com/lamualfa/uniserv#readme",
-  "repository": "https://github.com/lamualfa/uniserv",
+  "homepage": "https://github.com/lamualfa/uniserval#readme",
+  "repository": "https://github.com/lamualfa/uniserval",
   "keywords": [
     "ssr",
     "jsdom"
   ],
   "bugs": {
-    "url": "https://github.com/lamualfa/uniserv/issues"
+    "url": "https://github.com/lamualfa/uniserval/issues"
   },
   "scripts": {
     "build": "yarn format && yarn lint && tsc",

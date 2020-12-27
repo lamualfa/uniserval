@@ -1,13 +1,13 @@
-[![Version](https://badgen.net/npm/v/uniserv?color=blue&label=version)](https://npmjs.com/package/uniserv)
-[![Github License](https://badgen.net/github/license/lamualfa/uniserv?color=purple&label=license)](https://github.com/lamualfa/uniserv/blob/master/LICENSE)
-[![CI Testing](https://github.com/lamualfa/uniserv/workflows/CI%20Testing/badge.svg)](https://github.com/lamualfa/uniserv/actions?query=workflow%3A%22CI+Testing%22)
-[![Maintainability](https://api.codeclimate.com/v1/badges/da819077ced8476f6b42/maintainability)](https://codeclimate.com/github/lamualfa/uniserv/maintainability)
+[![Version](https://badgen.net/npm/v/uniserval?color=blue&label=version)](https://npmjs.com/package/uniserval)
+[![Github License](https://badgen.net/github/license/lamualfa/uniserval?color=purple&label=license)](https://github.com/lamualfa/uniserval/blob/master/LICENSE)
+[![CI Testing](https://github.com/lamualfa/uniserval/workflows/CI%20Testing/badge.svg)](https://github.com/lamualfa/uniserval/actions?query=workflow%3A%22CI+Testing%22)
+[![Maintainability](https://api.codeclimate.com/v1/badges/da819077ced8476f6b42/maintainability)](https://codeclimate.com/github/lamualfa/uniserval/maintainability)
 
 # Universal Server Side Rendering (SSR)
 
 Use Server Side Rendering (SSR) everywhere.
 
-> _Inspired from [@sveltech/ssr](https://github.com/roxiness/ssr)._
+> _Inspired from [tossr](https://github.com/roxiness/tossr)._
 
 ## Features
 
@@ -19,12 +19,12 @@ Use Server Side Rendering (SSR) everywhere.
 
 ## Installation
 
-We don't need any special template. Just install the `uniserv` library with your package manager:
+We don't need any special template. Just install the `uniserval` library with your package manager:
 
 ```bash
-yarn add uniserv
+yarn add uniserval
 # or
-npm i uniserv
+npm i uniserval
 ```
 
 ## Usage
@@ -34,17 +34,12 @@ npm i uniserv
 ```js
 const express = require('express')
 const { readFileSync } = require('fs')
-const { renderToString } = require('uniserv')
+const { renderToString } = require('uniserval')
 
 const template = readFileSync('./public/template.html', 'utf8')
 const script = readFileSync('./public/script.js', 'utf8')
 
 const server = express()
-
-// If you are using a JS framework like Svelte, Routify, etc.,
-// please uncomment the code below to use Dynamic Import (or Lazy Component)
-
-// server.use(express.static('./public'))
 
 server.use((req, res) => {
   renderToString(
@@ -107,6 +102,6 @@ Render HTML & Javascript code to string.
 
 If you find an problem, please report it on the Issue page. or If you have an suggestion and enhancement, please create the Pull Request. We will discuss it first.
 
-Need more example to use `uniserv`? try visiting the [example](https://github.com/lamualfa/uniserv/tree/master/example) folder.
+Need more example to use `uniserval`? try visiting the [example](https://github.com/lamualfa/uniserval/tree/master/example) folder.
 
 Thanks.
