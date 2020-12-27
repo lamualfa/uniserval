@@ -1,7 +1,7 @@
 [![Version](https://badgen.net/npm/v/uniserval?color=blue&label=version)](https://npmjs.com/package/uniserval)
 [![Github License](https://badgen.net/github/license/lamualfa/uniserval?color=purple&label=license)](https://github.com/lamualfa/uniserval/blob/master/LICENSE)
 [![CI Testing](https://github.com/lamualfa/uniserval/workflows/CI%20Testing/badge.svg)](https://github.com/lamualfa/uniserval/actions?query=workflow%3A%22CI+Testing%22)
-[![Maintainability](https://api.codeclimate.com/v1/badges/da819077ced8476f6b42/maintainability)](https://codeclimate.com/github/lamualfa/uniserval/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f60e1fe451d80ae14f1d/maintainability)](https://codeclimate.com/github/lamualfa/uniserval/maintainability)
 
 # Universal Server Side Rendering (SSR)
 
