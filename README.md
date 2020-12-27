@@ -85,14 +85,15 @@ Render HTML & Javascript code to string.
 - `html` - HTML string that will be processed.
 - `script` - Javascript code that will be executed.
 - `serverProps` - Custom data that will be passed to `script` code. The data can be accessed from `window.serverProps`.
+- `serverPropsFieldName` - Don't want to use the name `serverProps`? you can replace it with another name. Example `serverData`, `initialData`, etc.
 - `options` - Configuration
   - `host` - Hostname to use while rendering process. Default: `http://jsdom.jss` (You can use anything. But make sure to use the valid Hostname. `localhost` is an invalid instance.)
   - `path` - Will be used for `window.location.pathname`.
   - `eventName` - If exists, the output HTML string will be returned after event emitted. If not, it will be returned immediately.
-  - `userAgent` - `userAgent` affects the value read from `navigator.userAgent`, as well as the User-Agent header sent while fetching sub-resources.
-  - `cookie` - Will be used for `document.cookie`.
-  - `beforeEval` - a Function that will be called before the `script` is executed.
-  - `afterEval` - like `beforeEval`, but it will be called after the `script` executed.
+  - `userAgent` - `userAgent` affects the value read from `navigator.userAgent`, as well as the User-Agent header sent while fetching sub-resources. See [W3Schools userAgent](https://www.w3schools.com/jsref/prop_nav_useragent.asp).
+  - `cookie` - Will be used for `document.cookie`. See [document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie) documentation.
+  - `beforeEval : (dom) => void` - a Function that will be called before the `script` is executed.
+  - `afterEval : (dom) => void` - like `beforeEval`, but it will be called after the `script` executed.
 
 ## TODO
 

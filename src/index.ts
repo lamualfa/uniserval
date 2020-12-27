@@ -15,6 +15,7 @@ export type Options = {
   beforeEval?: (dom: JSDOM) => void
   afterEval?: (dom: JSDOM) => void
   isStaticPage?: boolean
+  serverPropsFieldName?: string
 }
 
 // eslint-disable-next-line
@@ -54,7 +55,7 @@ export function renderToString(
 
     const dom = new JSDOM(html, jsdomOptions)
 
-    dom.window.serverProps = serverProps
+    dom.window[options.serverPropsFieldName || 'serverProps'] = serverProps
     dom.window.document.cookie = options.cookie
     safeDom(dom)
 
